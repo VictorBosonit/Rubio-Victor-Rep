@@ -55,7 +55,7 @@ public class Main {
 
                     if (partes[0].matches(regexpFecha)){formatoFecha(partes);}
                     if (partes[0].matches(regexpEntero)){formatoNumero(partes);}
-                    if (partes[0].matches(regexpCadena)){formatoCadena(partes);;}
+                    if (partes[0].matches(regexpCadena)){formatoCadena(partes);}
 
             }
 
