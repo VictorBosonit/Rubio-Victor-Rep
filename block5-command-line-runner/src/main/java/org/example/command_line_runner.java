@@ -7,15 +7,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import javax.annotation.PostConstruct;
 
-
+//definimos la clase como  Spring Boot por medio de la anotacion @SpringBootAplication
 @SpringBootApplication
 public class command_line_runner  implements  CommandLineRunner {
 
+    //creamos la clase Main donde meteremos el metodo para arrancar la aplicacion spring
     public static void main(String[] args) {
         SpringApplication.run(command_line_runner.class, args);
     }
 
-
+        // la primera funcion imprime por consola la frase correspondiente
     @Bean
     CommandLineRunner Bean()
     {
@@ -23,7 +24,7 @@ public class command_line_runner  implements  CommandLineRunner {
         return p -> { System.out.println("Hola desde la clase secundaria");};
 
     }
-
+    // la segunda funcion imprime por consola la frase correspondiente
     @Bean
     CommandLineRunner Bean2(String[] args) {
 
@@ -34,6 +35,8 @@ public class command_line_runner  implements  CommandLineRunner {
         };
 
     }
+    //La anotacion @postConstruct hace que la funcion se ejecute antes de que se lance los bean
+
 
     @PostConstruct
     private void postConstruct()
@@ -41,6 +44,8 @@ public class command_line_runner  implements  CommandLineRunner {
         {
             System.out.println("Hola desde la clase incial");
         };
+
+    // la funcion @overide sobreescribe el metodo run y la utilizamos para imprimir los argumentos 
     @Override
     public void run(String... args) throws Exception {
 
