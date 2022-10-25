@@ -16,6 +16,7 @@ public class command_line_runner  implements  CommandLineRunner {
         SpringApplication.run(command_line_runner.class, args);
     }
 
+
         // la primera funcion imprime por consola la frase correspondiente
     @Bean
     CommandLineRunner Bean()
@@ -24,19 +25,23 @@ public class command_line_runner  implements  CommandLineRunner {
         return p -> { System.out.println("Hola desde la clase secundaria");};
 
     }
+
+
     // la segunda funcion imprime por consola la frase correspondiente
     @Bean
     CommandLineRunner Bean2(String[] args) {
 
-        return p ->
-        {
-            System.out.println("Hola desde la tercera clase");
+        return p  ->{
+        System.out.println("Hola desde la tercera clase");
 
+            for (int i =0; i< args.length;i++){
+                System.out.print(args[i]);}
+                System.out.println();
         };
-
     }
-    //La anotacion @postConstruct hace que la funcion se ejecute antes de que se lance los bean
 
+
+    //La anotacion @postConstruct hace que la funcion se ejecute antes de que se lance los bean
 
     @PostConstruct
     private void postConstruct()
@@ -45,13 +50,13 @@ public class command_line_runner  implements  CommandLineRunner {
             System.out.println("Hola desde la clase incial");
         };
 
-    // la funcion @overide sobreescribe el metodo run y la utilizamos para imprimir los argumentos 
+
+    // la funcion @overide sobreescribe el metodo run y la utilizamos para llamr al metodo e imprimir los argumentos
     @Override
     public void run(String... args) throws Exception {
 
-        for (int i =0; i< args.length;i++){
-            System.out.print(args[i]);}
-        System.out.println();
+        Bean2(args);
+
     }
 
 }
