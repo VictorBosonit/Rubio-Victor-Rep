@@ -31,12 +31,13 @@ public class command_line_runner  implements  CommandLineRunner {
     @Bean
     CommandLineRunner Bean2(String[] args) {
 
-        return p  ->{
-        System.out.println("Hola desde la tercera clase");
-
-            for (int i =0; i< args.length;i++){
-                System.out.print(args[i]);}
-                System.out.println();
+         return new CommandLineRunner() {
+            @Override
+            public void run(String... args) throws Exception {
+                for (int i =0; i< args.length;i++){
+                    System.out.print(args[i]);
+                }
+            }
         };
     }
 
