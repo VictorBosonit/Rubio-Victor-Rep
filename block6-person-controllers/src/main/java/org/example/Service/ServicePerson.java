@@ -1,8 +1,8 @@
 package org.example.Service;
 
 
-import org.example.Objeto.City;
-import org.example.Objeto.Person;
+import org.example.Model.City;
+import org.example.Model.Person;
 import org.example.Repository.RepositoryCity;
 import org.example.Repository.RepositoryPerson;
 import org.springframework.beans.factory.annotation.Autowired;

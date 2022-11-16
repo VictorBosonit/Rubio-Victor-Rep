@@ -1,4 +1,4 @@
-package org.example.Objeto;
+package org.example.Model;
 
 
 //this is Person clas witch the atributes, the constructors and getter and setter

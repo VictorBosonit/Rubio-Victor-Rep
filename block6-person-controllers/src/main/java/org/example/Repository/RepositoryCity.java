@@ -1,6 +1,6 @@
 package org.example.Repository;
 
-import org.example.Objeto.City;
+import org.example.Model.City;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

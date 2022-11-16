@@ -1,6 +1,6 @@
 package org.example.Repository;
 
-import org.example.Objeto.Person;
+import org.example.Model.Person;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

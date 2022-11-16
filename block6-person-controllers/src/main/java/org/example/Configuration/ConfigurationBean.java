@@ -1,8 +1,6 @@
 package org.example.Configuration;
 
-import org.example.Objeto.Person;
-import org.example.Repository.RepositoryPerson;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.example.Model.Person;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

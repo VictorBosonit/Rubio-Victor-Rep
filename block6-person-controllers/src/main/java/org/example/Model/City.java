@@ -1,4 +1,4 @@
-package org.example.Objeto;
+package org.example.Model;
 
 public class City {
 // this is city class and we have the atributes ,the constructors and setter y getter methods

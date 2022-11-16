@@ -1,8 +1,8 @@
 package org.example.Controlador;
 
 
-import org.example.Objeto.City;
-import org.example.Objeto.Person;
+import org.example.Model.City;
+import org.example.Model.Person;
 import org.example.Service.ServicePerson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
