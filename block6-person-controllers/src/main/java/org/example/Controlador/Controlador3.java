@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.annotation.HttpMethodConstraint;
+
 @RestController
 public class Controlador3 {
 
@@ -14,6 +16,7 @@ public class Controlador3 {
     ServiceBean serviceBean;
 
     // method for add new person to the list
+
     @GetMapping("/bean/{bean}")
     public Object insertBean(@PathVariable String bean) {
         return serviceBean.getBean(bean);

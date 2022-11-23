@@ -1,12 +1,10 @@
-package block7crudvalidation.Entity;
+package block7crudvalidation.person.infraestructure.controller.dto.input;
 
 import lombok.Data;
 
 import java.io.Serializable;
 
-/**
- * A DTO for the {@link Person} entity
- */
+
 @Data
 public class InputPersonDto implements Serializable {
     private final Long id;

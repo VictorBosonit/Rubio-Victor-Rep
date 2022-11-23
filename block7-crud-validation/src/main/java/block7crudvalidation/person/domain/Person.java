@@ -1,4 +1,4 @@
-package block7crudvalidation.Entity;
+package block7crudvalidation.person.domain;
 
 import lombok.*;
 import javax.persistence.*;
