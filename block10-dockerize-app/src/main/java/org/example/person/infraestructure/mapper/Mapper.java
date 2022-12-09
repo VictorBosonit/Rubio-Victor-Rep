@@ -1,4 +1,4 @@
-package block7crudvalidation.person.infraestructure.mapper;
+package org.example.person.infraestructure.mapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,5 +1,4 @@
 package block7crudvalidation.person.infraestructure.controller;
-
 import block7crudvalidation.person.domain.Person;
 import block7crudvalidation.person.aplication.ServicePerson;
 import block7crudvalidation.person.infraestructure.controller.dto.input.InputPersonDto;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/persona")
 @AllArgsConstructor
 public class PersonController {
+
     @Autowired
     private final ServicePerson servicePerson;
 

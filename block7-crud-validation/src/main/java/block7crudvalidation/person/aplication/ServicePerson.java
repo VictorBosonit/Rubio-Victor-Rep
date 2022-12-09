@@ -37,7 +37,6 @@ public class ServicePerson implements  InterfaceServicePerson{
             if(!(personDto.getUsers()==null||personDto.getPassword()==null||personDto.getName() == null ||
                     personDto.getCompany_email() == null || personDto.getPersonal_email() == null || personDto.getCity() == null ||
                     personDto.getActive() == null || personDto.getUsers().length() > 10)){
-
                 person = modelMapper.map(personDto, Person.class);
                 // I get the date from system and add the date to Created_date and save
                 // in database
@@ -66,7 +65,7 @@ public class ServicePerson implements  InterfaceServicePerson{
             dtoPerson.setTermination_date(date);
         }else{throw new EntityNotFoundException() ;}
             // I return an optional of object dtoPerson
-            return Optional.of(dtoPerson);
+            return  Optional.of(dtoPerson);
 
         } catch (EntityNotFoundException e) {
             throw new RuntimeException(e);
@@ -88,6 +87,16 @@ public class ServicePerson implements  InterfaceServicePerson{
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+    }
+
+    @Override
+    public Person updatePerson(Long id, Person person) {
+        return null;
+    }
+
+    @Override
+    public boolean deletePerson(Long id) {
+        return false;
     }
 
     @Override

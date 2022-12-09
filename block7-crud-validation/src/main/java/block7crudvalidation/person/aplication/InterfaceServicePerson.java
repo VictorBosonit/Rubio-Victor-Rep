@@ -10,24 +10,25 @@ import java.util.Optional;
 public interface InterfaceServicePerson {
 
 
-    // this method add object person to BB DD
-    Person addPerson(Person person) throws  Exception;
+    Person addPerson(Person person);
 
-    Person addPerson(InputPersonDto person)throws  Exception;
+    Person addPerson(InputPersonDto personDto) throws Exception;
 
     //This method get object from BB DD trow us id
     //Optional is for prevent error nullpointerexception
-    Optional<OutputPersonDto> getPerson(Long id)throws  Exception;
+    Optional<OutputPersonDto> getPerson(Long id) throws Exception;
 
     //This method get object from BB DD trow us name
     //List is for get one o more dates from BB DD
-    List<OutputPersonDto> getPersonByNames(String users)throws  Exception;
+    List<OutputPersonDto> getPersonByNames(String name) throws Exception;
 
 
-    List<OutputPersonDto> getAllPerson()throws  Exception;
+    //This method update the BB DD where id=id
+    Person updatePerson(Long id, Person person);
+
+    // This method delete Person where id=id
+    boolean deletePerson (Long id);
 
 
-
-
-
+    List<OutputPersonDto> getAllPerson() throws Exception;
 }
