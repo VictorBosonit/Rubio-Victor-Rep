@@ -1,4 +1,4 @@
-package block7crudvalidation.person.aplication;
+package block7crudvalidation.person.application;
 
 import block7crudvalidation.person.domain.Person;
 import block7crudvalidation.person.infraestructure.controller.dto.input.InputPersonDto;
@@ -10,23 +10,25 @@ import java.util.Optional;
 public interface InterfaceServicePerson {
 
 
-    // this method add object person to BB DD
-    Person addPerson(Person person) throws  Exception;
+
 
     Person addPerson(InputPersonDto person)throws  Exception;
 
     //This method get object from BB DD trow us id
     //Optional is for prevent error nullpointerexception
-    Optional<OutputPersonDto> getPerson(Long id)throws  Exception;
+    Optional<Object> getPerson(Long id)throws  Exception;
 
     //This method get object from BB DD trow us name
     //List is for get one o more dates from BB DD
-    List<OutputPersonDto> getPersonByNames(String users)throws  Exception;
+    List<Object> getPersonByNames(String users)throws  Exception;
 
+    List<Object> getAllPerson()throws  Exception;
 
-    List<OutputPersonDto> getAllPerson()throws  Exception;
+    //This method update the BB DD where id=id
+    Person updatePerson(Long id, InputPersonDto person)throws  Exception;
 
-
+    // This method delete Person where id=id
+    boolean deletePerson (Long id)throws  Exception;
 
 
 

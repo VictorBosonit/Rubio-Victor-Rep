@@ -1,20 +1,22 @@
 package block7crudvalidation.person.domain;
 
+import block7crudvalidation.student.domain.Student;
+import block7crudvalidation.teacher.domain.Teacher;
 import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
 @Data
 @Entity
-@Table
+@Table(name = "person")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Person {
 
     @Id
-    @Column(name="person_id")
+    @Column(name="id_person")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_person;
 
     @Column
     private String users;
@@ -48,4 +50,6 @@ public class Person {
 
     @Column
     private Date termination_date;
+
+
 }

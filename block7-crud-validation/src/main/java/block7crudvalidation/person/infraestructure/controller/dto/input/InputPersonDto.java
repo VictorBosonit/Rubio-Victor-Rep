@@ -4,17 +4,18 @@ import lombok.Data;
 
 import java.io.Serializable;
 
-
 @Data
 public class InputPersonDto implements Serializable {
-    private final Long id;
-    private final String users;
-    private final String password;
-    private final String name;
-    private final String surname;
-    private final String company_email;
-    private final String personal_email;
-    private final String city;
-    private final Boolean active;
-    private final String imagen_url;
+
+    private  String users;
+    private  String password;
+    private  String name;
+    private  String surname;
+    private  String company_email;
+    private  String personal_email;
+    private  String city;
+    private  Boolean active;
+    private  String imagen_url;
+
+
 }

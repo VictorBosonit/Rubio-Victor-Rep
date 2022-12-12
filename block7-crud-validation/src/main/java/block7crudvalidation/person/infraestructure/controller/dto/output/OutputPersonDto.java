@@ -1,5 +1,7 @@
 package block7crudvalidation.person.infraestructure.controller.dto.output;
 
+import block7crudvalidation.student.domain.Student;
+import block7crudvalidation.teacher.domain.Teacher;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,4 +25,5 @@ public class OutputPersonDto implements Serializable {
     private Boolean active;
     private Date created_date;
     private Date termination_date;
+
 }
