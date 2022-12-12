@@ -10,12 +10,17 @@ import java.util.Optional;
 public interface InterfaceServicePerson {
 
 
+<<<<<<< HEAD:block7-crud-validation/src/main/java/block7crudvalidation/person/application/InterfaceServicePerson.java
 
+=======
+    Person addPerson(Person person);
+>>>>>>> 6134432f0c111010e4661c007a45b38b0a37a4f9:block7-crud-validation/src/main/java/block7crudvalidation/person/aplication/InterfaceServicePerson.java
 
-    Person addPerson(InputPersonDto person)throws  Exception;
+    Person addPerson(InputPersonDto personDto) throws Exception;
 
     //This method get object from BB DD trow us id
     //Optional is for prevent error nullpointerexception
+<<<<<<< HEAD:block7-crud-validation/src/main/java/block7crudvalidation/person/application/InterfaceServicePerson.java
     Optional<Object> getPerson(Long id)throws  Exception;
 
     //This method get object from BB DD trow us name
@@ -26,10 +31,23 @@ public interface InterfaceServicePerson {
 
     //This method update the BB DD where id=id
     Person updatePerson(Long id, InputPersonDto person)throws  Exception;
+=======
+    Optional<OutputPersonDto> getPerson(Long id) throws Exception;
+
+    //This method get object from BB DD trow us name
+    //List is for get one o more dates from BB DD
+    List<OutputPersonDto> getPersonByNames(String name) throws Exception;
+>>>>>>> 6134432f0c111010e4661c007a45b38b0a37a4f9:block7-crud-validation/src/main/java/block7crudvalidation/person/aplication/InterfaceServicePerson.java
 
     // This method delete Person where id=id
     boolean deletePerson (Long id)throws  Exception;
 
+    //This method update the BB DD where id=id
+    Person updatePerson(Long id, Person person);
+
+    // This method delete Person where id=id
+    boolean deletePerson (Long id);
 
 
+    List<OutputPersonDto> getAllPerson() throws Exception;
 }

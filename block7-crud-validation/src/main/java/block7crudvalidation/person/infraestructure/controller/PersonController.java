@@ -1,6 +1,9 @@
 package block7crudvalidation.person.infraestructure.controller;
+<<<<<<< HEAD
 
 import block7crudvalidation.Feign.FeignsServer;
+=======
+>>>>>>> 6134432f0c111010e4661c007a45b38b0a37a4f9
 import block7crudvalidation.person.domain.Person;
 import block7crudvalidation.person.application.ServicePerson;
 import block7crudvalidation.person.infraestructure.controller.dto.input.InputPersonDto;
