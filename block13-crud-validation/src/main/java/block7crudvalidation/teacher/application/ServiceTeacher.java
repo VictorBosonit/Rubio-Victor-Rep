@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -73,7 +74,6 @@ public class ServiceTeacher implements InterfaceServiceTeacher{
             if(teacher.isPresent()) {
 
                 dtoTeacher = modelMapper.map(teacher, OutputTeacherDto.class);
-
 
             }else{throw new EntityNotFoundException() ;}
             // I return an optional of object dtoTeacher
