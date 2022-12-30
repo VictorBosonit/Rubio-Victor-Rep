@@ -1,27 +1,22 @@
 package block7crudvalidation.student;
 import block7crudvalidation.person.domain.Person;
-import block7crudvalidation.person.infraestructure.controller.dto.input.InputPersonDto;
 import block7crudvalidation.student.application.ServiceStudent;
 import block7crudvalidation.student.domain.Student;
 import block7crudvalidation.student.infraestructure.controller.StudentController;
 import block7crudvalidation.student.infraestructure.controller.dto.input.InputStudentDto;
 import block7crudvalidation.student.infraestructure.controller.dto.output.OutputStudentDto;
-import block7crudvalidation.teacher.domain.Teacher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
 import javax.persistence.EntityNotFoundException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.ignoreStubs;
 import static org.mockito.Mockito.when;
 
 @DataJpaTest

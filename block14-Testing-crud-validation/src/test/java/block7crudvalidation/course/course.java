@@ -1,25 +1,15 @@
 package block7crudvalidation.course;
-
 import block7crudvalidation.course.application.ServiceCourse;
 import block7crudvalidation.course.domain.Course;
 import block7crudvalidation.course.infraestructure.controller.CourseController;
 import block7crudvalidation.course.infraestructure.controller.dto.inputDto.InputCourseDto;
-import block7crudvalidation.course.infraestructure.controller.dto.outputDto.OutputCourseDto;
-import block7crudvalidation.person.application.ServicePerson;
 import block7crudvalidation.person.domain.Person;
-import block7crudvalidation.person.infraestructure.controller.PersonController;
-import block7crudvalidation.person.infraestructure.controller.dto.input.InputPersonDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-
 import javax.persistence.EntityNotFoundException;
-import java.util.Collections;
 import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
