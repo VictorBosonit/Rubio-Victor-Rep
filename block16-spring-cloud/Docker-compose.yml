@@ -19,7 +19,7 @@ services:
   cloudFeignContainer:
     networks:
       - mynetwork
-    image: cloud-feign:latest
+    image: cloud_feign
     ports:
       - "8081:8081"
     depends_on:
@@ -30,7 +30,7 @@ services:
   gatewayContainer:
     networks:
       - mynetwork
-    image: api-gateway:latest
+    image: api-gatewaay:latest
     ports:
       - "8083:8030"
     depends_on:
